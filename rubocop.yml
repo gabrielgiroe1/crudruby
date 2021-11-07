@@ -1,0 +1,27 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - config/application.rb
+    - bin/bundle
+    - vendor/**/*
+    - app/controllers/graphql_controller.rb
+    - config/database.yml
+    - spec/tasks/seeds_spec.rb
+    - db/seeds.rb
+    - db/schema.rb
+  NewCops: enable
+
+Metrics/BlockLength:
+  Enabled: true
+  CountComments: false
+  Max: 50
+  Exclude:
+    - 'config/routes.rb'
+    - 'spec/**/*.rb'
+    - 'db/schema.rb'
